@@ -38,10 +38,9 @@ class GoodsList {
   getSumGoods() {
     let endedSum = 0;
     this.goods.forEach((good) => {
-      console.log(good.price);
-      return (endedSum += good.price);
+      endedSum += good.price;
     });
-    console.log(endedSum);
+
     return (document.querySelector(".good-sum").innerHTML = `<span>${endedSum}</span>`);
   }
 
